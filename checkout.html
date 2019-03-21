@@ -5,6 +5,46 @@
     <title>Checkout</title>
 
     <form method="POST" action="https://request-inspector.glitch.me/">
+        <h2>Pay for your stuff, dang it.</h2>
+
+        <fieldset>
+            <legend>Credit Card Information</legend>
+            <label for="credit_card_number">Credit Card Number</label>
+            <input id="credit_card_number" name="credit_card_number" type="text" required>
+
+            <label for="expiration">Exp.</label>
+            <input id="expiration" name="expiration" type="text" placeholder="mm/yy" maxlenght="5" required>
+
+            <br>
+
+            <label for="cvv">Security Code</label>
+            <input id="cvv" name="cvv" type="text" placeholder="CVV" maxlength="3" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Address Information</legend>
+
+            <label for="address_1">Address 1</label>
+            <input id="address_1" name="address_1" type="text" placeholder="123 Street Apt#" required>
+
+            <br>
+
+            <label for="address_2">City</label>
+            <input id="address_2" name="address_2" type="text" required>
+
+            <label for="state">State</label>
+            <input id="state" name="state" type="text" required>
+
+            <br>
+
+            <input type="checkbox" id="save_card" name="save_card" checked>
+            <label for="save_card">Keep this credit card on file for future transactions.</label>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Buy Now!</button>
+
 
     </form>
 </head>
