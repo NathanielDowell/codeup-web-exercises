@@ -1,0 +1,99 @@
+
+/* Hex color codes found here--> https://htmlcolorcodes.com/color-picker/ */
+
+.fancy-header {
+    color: #9CE2D6;
+    text-align: center
+}
+
+.subheader {
+    color: #9CE2D6;
+    text-decoration: underline;
+}
+
+/* found Home Depot carpet sample images, downloaded and cropped one. */
+body {
+    background-color: #393939;
+    background-image: url("../img/graphite-charcoal-home-decorators-collection-area-rugs-509798-64_1000.jpg");
+    background-size: 900px;
+
+    color: #9CE2D6;
+    font-family: AppleGothic;
+    font-size: 1.25em;
+}
+
+font {
+    color: #9CE2D6;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+/* Changed the break line color to match the text color! */
+hr {
+    height: 2px;
+    color: #9CE2D6;
+    background-color: #9CE2D6;
+    border: none;
+}
+
+ul {
+    list-style-type: square;
+    text-align: center;
+    list-style-position: inside;
+}
+
+ol {
+    text-align: center;
+    list-style-position: inside;
+}
+
+table.center {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.grayback {
+    background-color: #393939;
+}
+
+img {
+    border-radius: 50%;
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align: center;
+}
+p span {
+    background-color: #393939;
+}
+
+h2 {
+    text-align: center;
+}
+
+a:hover {
+    color:darkorange;
+}
+a:active {
+    color:red;
+}
+a:visited {
+    color: darkcyan;
+}
+
+a {
+    color: #9CE2D6;
+}
+
+/* Open up your welcome.html file from earlier.
+
+Add a style to change the table, table cells td and rows tr padding and font sizes.
+Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).
+Continue experimenting with styles to increase the visual appeal of the page.
+Next Box Model	*/
