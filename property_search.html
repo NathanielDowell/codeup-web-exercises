@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Search</title>
+</head>
+<body>
+
+<h2>Find your dream.</h2>
+
+    <form method="POST" action="https://request-inspector.glitch.me/">
+
+        <fieldset>
+            <legend>Search!</legend>
+
+            <h4>Choose a property type:</h4>
+
+            <select name="property_type">Property Type
+                <option value="Apartment">Apartment</option>
+                <option value="Single_family">Single Family</option>
+                <option value="duplex">Duplex</option>s
+            </select>
+
+            <br>
+
+            <label for="haunted">
+                <input type="checkbox" id="haunted" name="haunted" checked>Haunted?
+            </label>
+
+            <br>
+
+            <h4>Square Footage Desired:</h4>
+
+            <label for="1000_or_less">
+                <input type="checkbox" id="1000_or_less" name="1000_or_less">1000 or less
+            </label><br>
+
+            <label for="1001_to_1500">
+                <input type="checkbox" id="1001_to_1500" name="1001_to_1500">1001 to 1500
+            </label><br>
+
+            <label for="1501_to_2000">
+                <input type="checkbox" id="1501_to_2000" name="1501_to_2000">1501 to 2000
+            </label><br>
+
+            <label for="2001_to_2500">
+                <input type="checkbox" id="2001_to_2500" name="2001_to_2500">2001 to 2500
+            </label><br>
+
+            <label for="2501_to_3000">
+                <input type="checkbox" id="2501_to_3000" name="2501_to_3000">2501 to 3000
+            </label><br>
+
+            <label for="3001_or_greater">
+                <input type="checkbox" id="3001_or_greater" name="3001_or_greater">3001 or greater
+            </label><br>
+
+            <label for="zipcode">Zipcode:</label>
+            <input id="zipcode" type="text">
+
+            <br>
+
+            <label for="bedroom#">Number of bedrooms:</label>
+            <input id="bedroom#" type="text">
+
+            <br>
+
+            <label for="bathroom#">Number of bedrooms:</label>
+            <input id="bathroom#" type="text">
+
+
+            <h4>Additional Ammenities:</h4>
+
+            <label for="Fireplace">
+                <input type="checkbox" id="Fireplace" name="Fireplace">Fireplace
+            </label><br>
+
+            <label for="Pool">
+                <input type="checkbox" id="pool" name="pool">Pool
+            </label><br>
+
+            <label for="Deck">
+                <input type="checkbox" id="Deck" name="Deck">Deck
+            </label><br>
+
+            <label for="open_floor_plan">
+                <input type="checkbox" id="open_floor_plan" name="open_floor_plan">Open Floor Plan
+            </label><br>
+
+            <label for="Large_lot">
+                <input type="checkbox" id="Large_lot" name="Large_lot">Large Lot
+            </label><br>
+
+            <h4>Choose your price range:</h4>
+
+            <label for="minimum_price">Minimum Price</label>
+            <input id="minimum_price" type="text" placeholder="$100,000">
+
+            <br>
+
+            <label for="maximum_price">Maximum Price</label>
+            <input id="maximum_price" type="text" placeholder="$300,000">
+
+            <br>
+
+        </fieldset>
+
+        <button type="submit">Go!</button>
+    </form>
+
+</body>
+</html>
+
+<!--
+
+Make a file named property-search.html. This will be a form for a property search.
+
+Add all the appropriate inputs you would need to conduct a property search:
+
+Property type
+square footage
+min_price
+max_price
+zipcode
+number of bedrooms
+number of bathrooms
+etc...
+The submit button's text should say "Search now"
+
+Make a file named checkout.html. This will be a form for a credit card checkout
+
+Make all fields required except for the checkbox
+Add an input for credit card number, expiration month/year, and security code
+Add inputs for the billing address
+Add a checkbox that says "Keep this credit card on file for future transactions"
+The submit button's text should say "Buy Now!"
+Commit all your work and push to GitHub :) -->
