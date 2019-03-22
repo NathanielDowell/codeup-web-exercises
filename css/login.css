@@ -27,7 +27,7 @@ fieldset {
 
     box-sizing: border-box;
     padding: 1em;
-    border: none;
+    border: 0px;
     background-color: white;
 
     /* There must be 1em between the content and the border of this element */
