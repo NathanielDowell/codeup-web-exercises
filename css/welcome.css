@@ -69,6 +69,11 @@ img {
 p {
     text-align: center;
 }
+
+.center {
+    text-align: center
+}
+
 p span {
     background-color: #393939;
 }
@@ -89,6 +94,8 @@ a:visited {
 
 a {
     color: #9CE2D6;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Open up your welcome.html file from earlier.
