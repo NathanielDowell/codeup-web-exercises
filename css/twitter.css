@@ -68,6 +68,7 @@ a {
 .profile-image {
     position: absolute;
     top: 250px;
+    left: 1em;
 }
 .profile-form {
     position: relative;
@@ -89,12 +90,16 @@ a {
 }
 .timeline {
     float: left;
-    width: 46%;
+    margin-left: .5em;
+    margin-right: .5em;
+    width: calc(50% - 1.5em)
 
 }
 .who-to-follow {
-    float: right;
-    width: 25%;
+    float: left;
+    margin-left: .5em;
+    margin-right: .5em;
+    width: calc(25% - 1.5em)
 }
 .img-circle {
     border-radius: 100%;
@@ -107,13 +112,13 @@ a {
     color: var(--main-link-color);
 }
 .container {
-    margin: 2em;
+    margin: 1em;
 }
 .media {
     padding: .5em;
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom-color: var(--separator-color);
+    border-bottom: 1px solid var(--separator-color);
     overflow: auto;
 }
 .media-image {
@@ -124,5 +129,6 @@ a {
 
 .media-body {
     float: left;
-    width: 100%;
+    width: calc(100% - 50px);
+
 }
