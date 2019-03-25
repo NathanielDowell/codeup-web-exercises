@@ -1,0 +1,23 @@
+.banner {
+    position:
+}
+
+.sidebar-left{
+    float:left;
+    width: 400px;
+    background-color: coral;
+}
+
+.nav-anchor {
+    text-decoration: none;
+}
+
+.main-body {
+    float:left
+}
+
+.footer {
+    position: fixed;
+    bottom: 1em;
+    left: 2em;
+}
