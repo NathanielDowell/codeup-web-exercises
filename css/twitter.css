@@ -27,11 +27,19 @@ a {
 }
 .top-nav {
     background: var(--light-bg);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 1.5em;
 }
 .nav-link {
     color: var(--main-link-color);
@@ -43,6 +51,7 @@ a {
 }
 .profile {
     background: var(--light-bg);
+    height: 80px;
 }
 .btn {
     border: 1px solid var(--main-link-color);
@@ -56,6 +65,37 @@ a {
     font-size: 1.3em;
     padding: 10px;
 }
+.profile-image {
+    position: absolute;
+    top: 250px;
+}
+.profile-form {
+    position: relative;
+    top: 17px;
+    float: right;
+}
+.profile-details {
+    float: left;
+    width: 25%;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+.profile-items {
+    list-style-type: none;
+    padding: 0;
+}
+.profile-entry {
+    margin: .5em;
+}
+.timeline {
+    float: left;
+    width: 46%;
+
+}
+.who-to-follow {
+    float: right;
+    width: 25%;
+}
 .img-circle {
     border-radius: 100%;
     border: 4px solid var(--light-bg);
@@ -65,4 +105,24 @@ a {
 }
 .text-muted {
     color: var(--main-link-color);
+}
+.container {
+    margin: 2em;
+}
+.media {
+    padding: .5em;
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom-color: var(--separator-color);
+    overflow: auto;
+}
+.media-image {
+    max-width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
+
+.media-body {
+    float: left;
+    width: 100%;
 }
