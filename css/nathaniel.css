@@ -1,5 +1,6 @@
 .banner {
-    position:
+    position: relative;
+
 }
 
 .sidebar-left{
@@ -8,7 +9,7 @@
     background-color: coral;
 }
 
-.nav-anchor {
+.sidebar-left a {
     text-decoration: none;
 }
 
