@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 4em;
+    padding:0;
+    border: solid 1px #6b6b6b;
+}
+
+#heading {
+    color: #6b6b6b;
+    font-weight: 200;
+}
+
+.flex-container {
+    justify-content: left;
+}
+
+
+.btn-secondary {
+    container: flex;
+    background-color: #f8f8f8;
+    color: #6b6b6b;
+    border: none;
+    margin: 0;
+    position: absolute;
+    right: 5px;
+}
+
+.btn-secondary:hover {
+    background-color: #e7e7e7;
+    color: #6b6b6b;
+
+}
+
+/*Main content below navbar.*/
+
+.container {
+
+}
+
+.jumbotron {
+
+}
+
+h1 {
+
+}

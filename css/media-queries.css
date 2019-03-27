@@ -44,7 +44,7 @@ nav {
 styling for mobile
 ***********************************/
 
-@media screen and (max-width:480px){
+@media screen and (max-width: 480px){
     body{
         width: 100%;
     }
