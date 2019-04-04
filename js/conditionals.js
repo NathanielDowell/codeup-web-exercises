@@ -20,45 +20,51 @@
         console.log("It pleases the master!");
         var number = prompt("Please give us a number, nice Master!");
 
-        console.log(number = +number);
-        console.log("The Master is so smart, knowing such a number!")
-        alert("Oh, " + number + " is an excellent choice, Master!");
+        if (isNaN(number)) {
+            number = prompt("Apologies, nice Master, but we needs a number...");
+            console.log("Master toys with us.");
+        } else console.log(number = +number);
 
-        if (number%2 == 1) {
-            console.log("Master's number is odd.");
-            alert("You have given us an ODD number, Master!");
-        } else {
-            console.log("Master's number is even.");
-            alert("You have given us an EVEN number, Master!")
+        if (number == 0) {
+            console.log("This number is the number of desolation.");
+            alert("Master, zero leaves us empty inside.");
+        } else if((number < 0) || (number > 0)) {
 
+            console.log("The Master is so smart, knowing such a number!")
+            alert("Oh, " + number + " is an excellent choice, Master!");
+
+            if (number % 2 == 1) {
+                console.log("Master's number is odd.");
+                alert("You have given us an ODD number, Master!");
+            } else {
+                console.log("Master's number is even.");
+                alert("You have given us an EVEN number, Master!")
+            }
+
+            if (number >= 1) {
+                console.log("This is a happy number.");
+                alert("Master, your number is POSITIVE!");
+            } else {
+                console.log("This is a sad number.");
+                alert("Master, your number is NEGATIVE.");
+            }
+
+            console.log("Master sees our soul...perhaps Master wishes us to perform additional magic...");
+
+            var plus100 = (number + 100);
+            console.log("Not enough fingers...")
+            console.log("Oh!  Master's number, plus 100, is " + plus100 + "!!");
+            alert("Master!  If we add 100 to your number, we get " + plus100 + "!");
+
+
+            if (confirm("If the Master is pleased, might we have some pets?")) {
+                console.log("Aaaaah.  We loves the pets.");
+            } else {
+                console.log("We have troubled the Master.");
+                alert("Sorry to have bothered you, nice Master...");
+
+            }
         }
-
-        if (number >= 0) {
-            console.log("This is a happy number.");
-            alert("Master, your number is POSITIVE!");
-        } else {
-            console.log("This is a sad number.");
-            alert("Master, your number is NEGATIVE.");
-        }
-
-        console.log("Master sees our soul...perhaps Master wishes us to perform addition magic...");
-
-        var plus100 = (number + 100);
-        console.log("Not enough fingers...")
-        console.log("Oh!  Master's number, plus 100, is " + plus100 + "!!");
-        alert("Master!  If we add 100 to your number, we get " + plus100 + "!");
-
-
-
-        if (confirm("If the Master is pleased, might we have some pets?")) {
-            console.log("Aaaaah.  We loves the pets.");
-        } else {
-            console.log("We never please the Master.");
-            alert("Sorry to have bothered you, nice Master...");
-
-        }
-
-
 
     } else {
         console.log("The master is angry with us.");
