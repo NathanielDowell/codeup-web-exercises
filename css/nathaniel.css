@@ -3,10 +3,11 @@
 
 }
 
+
 .sidebar-left{
-    display: grid;
-    grid-column-start: 1;
-    min-height: 100%;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
 
     width: 25%;
     border-right: 1em solid black;
