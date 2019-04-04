@@ -90,6 +90,26 @@
  * console.logging the function's return value
  */
 
+function analyzeColor(userColor) {
+    if(userColor == "blue") {
+        console.log("Blue is the color of my inside.");
+    } else if(userColor == "green") {
+        console.log("Green is the color of the leaf I had in my pocket when I was 5, but not the leaf you're thinking about.  The other one.");
+    } else if(userColor == "yellow") {
+        console.log("Yellow is our happy little sun that, without constant vigilance, will cheerfully murder you with its radiation.");
+    } else if(userColor == "red") {
+        console.log("Red is the color of my angry pants.");
+    } else if(userColor == "purple") {
+        console.log("Purple is my wife's favorite color.");
+    } else if(userColor == "orange") {
+        console.log("Orange. Really?")
+    } else {
+        console.log("Meh. I don't care for your answer.");
+    }
+}
+
+analyzeColor("red");
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
