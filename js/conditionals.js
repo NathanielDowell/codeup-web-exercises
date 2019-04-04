@@ -99,10 +99,12 @@ function analyzeColor(userColor) {
         console.log("Yellow is our happy little sun that, without constant vigilance, will cheerfully murder you with its radiation.");
     } else if(userColor == "red") {
         console.log("Red is the color of my angry pants.");
-    } else if(userColor == "purple") {
+    } else if(userColor == "violet") {
         console.log("Purple is my wife's favorite color.");
     } else if(userColor == "orange") {
         console.log("Orange. Really?")
+    } else if(userColor == "indigo") {
+        console.log("Who, besides a poet or artist, uses the word \"Indigo\"?")
     } else {
         console.log("Meh. I don't care for your answer.");
     }
@@ -120,8 +122,11 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
- * You should see a different message everytime you refresh the page
+ * You should see a different message every time you refresh the page
  */
+
+console.log(analyzeColor(randomColor));
+
 
 /**
  * TODO:
