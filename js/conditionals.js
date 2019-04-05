@@ -188,17 +188,54 @@ alert(pickyColor);
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+//var cartTotal = 100;
+
+//function calculateTotal(luckyNumber, cartTotal) {
+
+//    switch (luckyNumber) {
+//         case ("0"):
+//             return (cartTotal);
+//             break;
+//         case ("1"):
+//             return (cartTotal - (cartTotal * .10));
+//         break;
+//         case ("2"):
+//             return (cartTotal - (cartTotal * .25));
+//             break;
+//         case ("3"):
+//             return (cartTotal - (cartTotal * .35));
+//             break;
+//         case ("4"):
+//             return (cartTotal - (cartTotal * .5));
+//             break;
+//         case ("5"):
+//             return (cartTotal - cartTotal);
+//
+//     }
+// }
+
+/**
+ * TODO:
+ * Uncomment the line below to generate a random number between 0 and 6.
+ * Prompt the user for their total bill, then use your `calculateTotal` function
+ * and alerts to display to the user what their lucky number was, what their
+ * price before the discount was, and what their price after the discount is.
+ */
+// Generate a random number between 0 and 6
+var luckyNumber = Math.floor(Math.random() * 6);
+
 var cartTotal = 100;
 
-function calculateTotal(percentRepresent, cartTotal) {
+function calculateTotal(luckyNumber, cartTotal) {
 
-    switch (percentRepresent) {
+    switch (luckyNumber) {
         case ("0"):
             return (cartTotal);
+            alert("Your total is $" + cartTotal + ", and you saved" )
             break;
         case ("1"):
             return (cartTotal - (cartTotal * .10));
-        break;
+            break;
         case ("2"):
             return (cartTotal - (cartTotal * .25));
             break;
@@ -213,13 +250,3 @@ function calculateTotal(percentRepresent, cartTotal) {
 
     }
 }
-
-/**
- * TODO:
- * Uncomment the line below to generate a random number between 0 and 6.
- * Prompt the user for their total bill, then use your `calculateTotal` function
- * and alerts to display to the user what their lucky number was, what their
- * price before the discount was, and what their price after the discount is.
- */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
