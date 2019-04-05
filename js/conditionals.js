@@ -75,7 +75,7 @@
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
- * name as input. This function should return a message that related to that
+ * name as input. This function should return a message that is related to that
  * color. Only worry about the colors defined above, if the color passed is not
  * one of the ones defined above, return a message that says so
  *
@@ -92,21 +92,21 @@
 
 function analyzeColor(userColor) {
     if(userColor == "blue") {
-        console.log("Blue is the color of my inside.");
+        return "Blue is the color of my inside.";
     } else if(userColor == "green") {
-        console.log("Green is the color of the leaf I had in my pocket when I was 5, but not the leaf you're thinking about.  The other one.");
+        return "Green is the color of the leaf I had in my pocket when I was 5, but not the leaf you're thinking about.  The other one.";
     } else if(userColor == "yellow") {
-        console.log("Yellow is our happy little sun that, without constant vigilance, will cheerfully murder you with its radiation.");
+        return "Yellow is our happy little sun that, without constant vigilance, will cheerfully murder you with its radiation.";
     } else if(userColor == "red") {
-        console.log("Red is the color of my angry pants.");
+        return "Red is the color of my angry pants.";
     } else if(userColor == "violet") {
-        console.log("Purple is my wife's favorite color.");
+        return "Purple is my wife's favorite color.";
     } else if(userColor == "orange") {
-        console.log("Orange. Really?")
+        return "Orange. Really?";
     } else if(userColor == "indigo") {
-        console.log("Who, besides a poet or artist, uses the word \"Indigo\"?")
+        return "Who, besides a poet or artist, uses the word \"Indigo\"?";
     } else {
-        console.log("Meh. I don't care for your answer.");
+        return "Meh. I don't care for your answer.";
     }
 }
 
@@ -132,7 +132,31 @@ console.log(analyzeColor(randomColor));
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+var switchColor = prompt("Choose a color.");
 
+switch (switchColor){
+    case "red":
+        console.log("Red is the color of my RAGE!!!");
+        break;
+    case "orange":
+        console.log("Orange is the color of oranges, or potatoes (painted orange).");
+        break;
+    case "yellow":
+        console.log("Yellow is for nerds.");
+        break;
+    case "green":
+        console.log("Green is so photosynthesis.");
+        break;
+    case "blue":
+        console.log("Blue skies...smilin' at me...");
+        break;
+    case "indigo":
+        console.log("My name is Indigo Montoya.  You killed my father.  Prepare to die.");
+        break;
+    case "violet":
+        console.log("Violets beget violets.");
+        break;
+}
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -140,13 +164,16 @@ console.log(analyzeColor(randomColor));
  * function to show it to the user.
  */
 
+var pickyColor = (analyzeColor(prompt("Provide for me yet another color.")));
+
+alert(pickyColor);
 /* ########################################################################## */
 
 /**
  * TODO:
  * Suppose there's a promotion in Walmart, each customer is given a randomly
  * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
- * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
+ * no discount, if your lucky number is 1, you'll get a 10% discount, if it's 2,
  * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
  * all for free!.
  *
@@ -161,6 +188,31 @@ console.log(analyzeColor(randomColor));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+var cartTotal = 100;
+
+function calculateTotal(percentRepresent, cartTotal) {
+
+    switch (percentRepresent) {
+        case ("0"):
+            return (cartTotal);
+            break;
+        case ("1"):
+            return (cartTotal - (cartTotal * .10));
+        break;
+        case ("2"):
+            return (cartTotal - (cartTotal * .25));
+            break;
+        case ("3"):
+            return (cartTotal - (cartTotal * .35));
+            break;
+        case ("4"):
+            return (cartTotal - (cartTotal * .5));
+            break;
+        case ("5"):
+            return (cartTotal - cartTotal);
+
+    }
+}
 
 /**
  * TODO:
