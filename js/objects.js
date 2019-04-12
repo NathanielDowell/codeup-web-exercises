@@ -12,6 +12,13 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+var person = {
+        firstName: "Nathaniel",
+        lastName: "Dowell"
+    };
+
+console.log(person.firstName);
+console.log(person.lastName);
 
 
     /**
@@ -24,12 +31,22 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+    function sayHello() {
+        return "Hello from " + person.firstName + " " +  person.lastName + "!";
+    }
+
+    console.log(sayHello());
+
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
-     * discount. Write a JS program, using conditionals, that logs to the
+     * discount.
+     *
+     * Write a JS program, using conditionals, that logs to the
      * browser, how much Ryan, Cameron and George need to pay. We know that
-     * Cameron bought $180, Ryan $250 and George $320. Your program will have to
+     * Cameron bought $180, Ryan $250 and George $320.
+     *
+     * Your program will have to
      * display a line with the name of the person, the amount before the
      * discount, the discount, if any, and the amount after the discount.
      *
@@ -38,11 +55,30 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    function hebDiscount() {
+
+        for (var i = 0; i <= 2; i++) {
+
+            var shopper = shoppers[i];
+
+            if (shopper.amount > 200) {
+                console.log("Congratulations " + shopper.name + ", your total is $" + (shopper.amount - (shopper.amount * .12)) + ", and you saved $" + (shopper.amount * .12) + "!");
+            } else if (shopper.amount <= 200) {
+                console.log("Better luck next time, " + shopper.name + ".  You're paying the full $" + shopper.amount + ".");
+            }
+        }
+
+    }
+
+
+    hebDiscount();
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
