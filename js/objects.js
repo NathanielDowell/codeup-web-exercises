@@ -102,6 +102,14 @@ console.log(person.lastName);
     //
     // hebDiscount(shoppers[0]);
 
+    //An interesting thing using an empty string with output:
+
+    function displayShopperInfo(shopper) {
+        var output = "";
+        output += shopper.name + " spent " + shopper.amount;
+        return output;
+    }
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
