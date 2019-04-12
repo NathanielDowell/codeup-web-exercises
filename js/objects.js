@@ -30,6 +30,10 @@ console.log(person.lastName);
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+// coould also be in object method format:
+    // person.sayHello = function() {
+    //      return "Hello from  " + this.firstName + " " + this.lastName + "!";
+    // };
 
     function sayHello() {
         return "Hello from " + person.firstName + " " +  person.lastName + "!";
@@ -61,9 +65,15 @@ console.log(person.lastName);
         {name: 'George', amount: 320}
     ];
 
-    function hebDiscount() {
+    var shoppers1 = [
+        {name: 'Sam', amount: 300},
+        {name: 'Cathy', amount: 30},
+        {name: 'Justin', amount: 10}
+    ];
 
-        for (var i = 0; i <= 2; i++) {
+    function hebDiscount(shoppers) {
+
+        for (var i = 0; i < shoppers.length; i++) {
 
             var shopper = shoppers[i];
 
@@ -76,8 +86,21 @@ console.log(person.lastName);
 
     }
 
+    hebDiscount(shoppers1);
 
-    hebDiscount();
+    //This was my function before I refactored it to use a for loop:
+
+    // function hebDiscount(shopper) {
+    //
+    //     if (shopper.amount > 200) {
+    //         console.log(shopper.name + shopper.amount + (shopper.amount - (shopper.amount * .12)));
+    //     } else if (shopper.amount <= 200) {
+    //         console.log("Better luck next time, " + shopper.name + ".  You're paying the full $" + shopper.amount + ".");
+    //     }
+    //
+    // }
+    //
+    // hebDiscount(shoppers[0]);
 
 
     /** TODO:
@@ -92,6 +115,53 @@ console.log(person.lastName);
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+var books = [
+
+    {
+        title: 'Frankenstein',
+        author: {
+            lastName: 'Shelley',
+            firstName: 'Mary'
+        }
+    },
+
+        {
+            title: 'Moby Dick',
+            author: {
+            lastName: 'Melville',
+                firstName: 'Herman'
+            }
+        },
+
+        {
+            title: 'The Fellowship of the Ring',
+            author: {
+            lastName: 'Tolkein',
+                firstName: 'J.'
+            }
+        },
+
+        {
+            title: 'Carry On, Mr. Bowditch',
+            author: {
+                lastName: 'Latham',
+                firstName: 'Jean'
+            }
+        },
+
+        {
+            title: 'The Dark is Rising',
+                author: {
+                lastName: 'Cooper',
+                    firstName: 'Susan'
+            }
+        }
+
+    ];
+
+console.log(books[0].author.lastName + ", " + books[0].author.firstName);
+console.log("------------------------")
 
     /**
      * TODO:
@@ -117,6 +187,21 @@ console.log(person.lastName);
      *      ---
      *      ...
      */
+
+    function loopyBook(arrayVar) {
+
+        for (var i = 0; i < 4; i++) {
+
+            console.log("Book # " + (+i + 1));
+            console.log ("Title: " + arrayVar[i].title);
+            console.log ("Author: " + arrayVar[i].author.firstName + " " + arrayVar[i].author.lastName);
+            console.log("---");
+
+        }
+
+    }
+
+    console.log(loopyBook(books));
 
     /**
      * Bonus:
