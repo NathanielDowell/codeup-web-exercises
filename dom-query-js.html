@@ -85,18 +85,18 @@
             //         listItems[i].style.color = "grey";
             //     }
             // }
-
+var alternateListColors = function(event){
+    for (var i = 0; listItems.length > i; i++) {
+        var dbid = listItems[i].getAttribute('data-dbid');
+        if(dbid == 1){
+            listItems[i].style.color = "blue";
+        } else if (dbid % 2 === 0) {
+            listItems[i].style.color = "grey";
+        }
+    }
+}
         var theobald = document.getElementById("theobald");
-            theobald.addEventListener("click", function(event){
-                for (var i = 0; listItems.length > i; i++) {
-                    var dbid = listItems[i].getAttribute('data-dbid');
-                    if(dbid == 1){
-                        listItems[i].style.color = "blue";
-                    } else if (dbid % 2 === 0) {
-                        listItems[i].style.color = "grey";
-                    }
-            }
-            }, false);
+            theobald.addEventListener("click", alternateListColors, false);
 
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
