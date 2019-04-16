@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox 4</title>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <script src="js/keys.js"></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<h1>Crazy Map</h1>
+
+<p>Mini - Exercise 4 (before final exercise)
+
+    Create an HTML file called mapbox-4.html centered on San Antonio
+
+
+    that programmatically is re-centered over Zion National Park using
+
+    the coordinates of the park by geocoding the physical address.
+
+
+    Add the latitude and longitude of Honolulu, Hawaii and use reverse
+
+    geocoding to move the map to this location by geocoding inside of the
+
+    reverseGeocode function.
+</p>
+
+<div id='map' style='width: 1000px; height: 80vh; margin: 0 auto'></div>
+
+
+<script>
+    mapboxgl.accessToken = mapBoxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 11,
+        center: [-98.4936, 29.4241],
+    });
+
+
+    var zionAddress = "Zion National Park";
+
+    geocode(zionAddress, mapBoxKey).then(function(result) {
+
+    })
+
+    var honCoor = {
+        lng: -157.8583,
+        lat: 21.3069
+    };
+
+    reverseGeocode(honCoor, mapBoxKey).then(function(address) {
+        geocode(address, mapBoxKey).then(function(coor) {
+       map.setCenter(coor);
+        });
+    });
+
+    // var delay = 5000;
+    //
+    // var zionGeocode = geocode("1 Zion Park Blvd. State Route 9, Springdale, UT 84767", mapBoxKey).then(function(result) {map.setCenter(result)});
+    //
+    // var honoluluReverseGeocode = reverseGeocode({lng: -157.8583 , lat: 21.3069}, mapBoxKey).then(function(result) {console.log(result)});
+    //
+    //
+    // setTimeout(function(){
+    //
+    // }
+
+        }, delay);
+
+    // geocode("1 Zion Park Blvd. State Route 9, Springdale, UT 84767", mapBoxKey).then(function(result) {
+    //     map.setCenter(result);
+    // });
+    //
+    // reverseGeocode({lng: -157.8583 , lat: 21.3069}, mapBoxKey).then(function(result) {
+    //     console.log(result);
+    // })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox 3 - Popups</title>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <script src="js/keys.js"></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<h1>Lincoln Memorial</h1>
+
+<p>Create an HTML file called mapbox-3.html and copy your code over from mapbox-2.
+
+    Add a popup to the Lincoln Memorial marker that contains the text
+
+    "Lincoln Memorial".</p>
+
+<div id='map' style='width: 1200px; height: 80vh; margin: 0 auto'></div>
+
+
+<script>
+    mapboxgl.accessToken = mapBoxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 13,
+        center: [-77.0369, 38.9072],
+    });
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-77.050176, 38.889269])
+        .addTo(map);
+
+    var popup = new mapboxgl.Popup()
+        .setLngLat([-77.050176, 38.889269])
+        .setHTML("<p>Lincoln Memorial</p>")
+        .addTo(map)
+
+    marker.setPopup(popup);
+
+    geocode("paris, France", mapBoxKey).then(function(result) {
+        map.setCenter(result);
+    });
+
+    reverseGeocode({lng: -98.4861 , lat: 29.4260}, mapBoxKey).then(funtion(result) {
+        console.log(result);
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Hometown Exercise</title>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <script src="js/keys.js"></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<h1>My Home Town</h1>
+<p>Mini - Exercise 1 (before markers)
+
+    Create an HTML file called mapbox-1.html
+
+    In this file, create a Mapbox map that shows your home town.
+    After 5 seconds, have the map automatically change to a map of the entire
+    United States using a satellite style.</p>
+
+<div id='map' style='width: 1200px; height: 80vh; margin: 0 auto'></div>
+
+
+<script>
+    mapboxgl.accessToken = mapBoxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 11,
+        center: [-98.565, 29.535]
+    });
+
+    // setTimeout(function(){}) {
+    //     map.setZoom(2);
+    //     map.setStyle();
+    // }
+    // set zoom, set style
+</script>
+</body>
+</html>
