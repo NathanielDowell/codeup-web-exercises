@@ -23,25 +23,55 @@
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/satellite-streets-v9',
-        zoom: 13,
-        center: [-98.565, 29.535]
+        zoom: 11,
+        center: [-98.52, 29.535]
 
     });
 
-    geocode("819 Hildebrand Ave. San Antonio, TX 78212", mapBoxKey).then(function(result) {
+    var tokyoInnLocation = "819 Hildebrand Ave. San Antonio, TX 78212";
+    var theMeltingPotLocation = "14855 Blanco Rd. Ste 110, San Antonio, TX 78216";
+    var romesPizzaLocation = "5999 De Zavala Rd, San Antonio, TX 78249";
+    //
+    // var favoriteRestaurants = [tokyoInnLocation, theMeltingPotLocation, romesPizzaLocation];
+    //
+    // favoriteRestaurants.forEach(function(element){
+    //    geocode(element, mapBoxKey).then(function(result){
+    //            console.log(result);
+    //            map.setCenter(result);
+    //            map.setZoom(18);
+    //    });
+    // });
+    //
+    geocode(theMeltingPotLocation, mapBoxKey).then(function(result) {
         console.log(result);
         map.setCenter(result);
         map.setZoom(18);
     });
 
-    var marker = new mapboxgl.Marker()
-        .setLngLat([-98.507, 29.46668])
-        .addTo(map);
+    var favoriteMarkers = []
+    //
+    // var marker = new mapboxgl.Marker()
+    //     .setLngLat([-98.507, 29.46668])
+    //     .addTo(map);
+    //
+    // var popupPot = new mapboxgl.Popup()
+    //     .setLngLat([-98.514791, 29.578061])
+    //     .setHTML("<p>The Melting Pot<br>" +
+    //         "Slow paced eating for a quality date-night.<br>" +
+    //         "Pricey, so we can't visit too often.</p>");
+    // marker.setPopup(popupPot);
+    //
+    //
+    // var marker = new mapboxgl.Marker()
+    //     .setLngLat([-98.507, 29.46668])
+    //     .addTo(map);
+    //
+    // var popupRomes = new mapboxgl.Popup()
+    //     .setLngLat([-98.600487, 29.563736])
+    //     .setHTML("<p>Rome's Pizza<br>" +
+    //         "This place has the best veggie pizza.</p>");
+    // marker.setPopup(popupRomes);
 
-    var popup = new mapboxgl.Popup()
-        .setLngLat([-98.507, 29.46668])
-        .setHTML("<p>Niki's Tokyo Inn</p>");
-    marker.setPopup(popup)
 
 </script>
 
@@ -60,9 +90,7 @@
 
 <!--Make sure the info window does not display until the marker has been clicked on.-->
 <!--Refactor your code to display at least three of your favorite restaurants with
-information about each.
-
-Create an array of objects with information about each
+information about each. Create an array of objects with information about each
 restaurant to accomplish this. Use a .forEach() loop rather than a for loop.-->
 
 </body>

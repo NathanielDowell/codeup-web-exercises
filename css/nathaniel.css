@@ -1,36 +1,7 @@
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows; 1fr 1fr 1fr;
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-}
-
-.banner {
-    position: relative;
-
-}
-
-.sidebar-left{
-    grid-column:2;
-    grid-row: 5/5;
-
-    border-right: 1em solid black;
-    border-left: 2px solid black;
-    background-color: #1c8e12;
-}
-
-.sidebar-left a {
-    text-decoration: none;
-    text-align: center;
-}
-
-.main-body {
-    display: grid;
-    grid-column-start: 4;
-}
-
-.footer {
-    position: fixed;
-    bottom: 1em;
-    left: 2em;
 }
