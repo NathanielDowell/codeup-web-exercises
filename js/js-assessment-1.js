@@ -715,64 +715,8 @@ Example 2 Output:
 
 ```js
                                         10
-                                            ```
-Collapse
 
 
-
-
-:laptop-parrot:
-2
-
-
-
-Carson Belew2:14 PM
-Here is your Pod Standup Schedule for this week:
-
-Thursday 4/18 (Location: 6th Floor Conf. Room)
-
-What About Bob? - 4:05
-The Groundhogs - 4:07
-Ghostbusters - 4:14
-Space Jam - 4:21
-Where the Buffalo Roam - 4:28
-Life Aquatic - 4:35
-Charlie's Angels - 4:42
-This will be the last standup for this round of pods, so be prepared to show what you've worked on :slightly_smiling_face:. A new poll will be sent out and new pods assigned for jQuery -> JSII
-
-:dk-kart:
-1
-
-:dab-squidward:
-1
-
-:confused_parrot:
-1
-
-:+1::skin-tone-5:
-1
-
-
-Carson Belew3:55 PM
-Saw this on Geekdom, sharing it here:squid-dab:
-3:55 PM
-https://geekdomsa.slack.com/archives/C034CFRLL/p1555574980013200
-
-Terrell S.4:24 PM
-https://docs.google.com/forms/d/e/1FAIpQLSdKniPiCYeALwwiD-zsN2Q95cvVXk1T8Kg7Yrab6SsH0In8XQ/viewform?usp=sf_link
-
-:terrell:
-1
-
-:memo:
-1
-
-4:25 PM
-Happy friday @channel please get the survey filled out!
-Today
-
-jreich58:56 AM
-Possible Solutions to Practice Assessment Problems 
 <!DOCTYPE html>
 <html lang="en">
 <head>
