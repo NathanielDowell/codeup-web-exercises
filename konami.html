@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+</head>
+<body>
+
+<h1>Easter Is Coming For Your Egg.</h1>
+
+<h2 id="easter-egg"><em>What do we have here?</em></h2>
+
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+// Provide an array with the code for matching purposes:
+    var konamiCode = [
+        "ArrowUp",
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowRight",
+        "b",
+        "a"
+    ];
+// provide a variable to track progress through the code:
+    var konamiCodeCount = 0;
+
+
+// the magic bit of code that allows the release of a key to be captured
+    $(document).keyup(function(event){
+    //Vanilla JS version ---> document.addEventListener('keyup', function(event){});
+
+        // event.key is the key pressed, konamiCode is the code array,
+            // [konamiCodeCount] uses
+                // if "ArrowUp" === the array item accessed by the current konamiCodeCount value;
+        if (event.key === konamiCode[konamiCodeCount]) {
+
+            //increments the konamiCodeCount variable so that it will access the next array item:
+            konamiCodeCount += 1;
+
+            // Check to see if the proper code count has been achieved:
+                //
+            if (konamiCodeCount === konamiCode.length) {
+                alert("I'm basically Superman.");
+
+                //to allow reuse of the code:
+                konamiCodeCount = 0;
+            }
+
+        } else {
+            konamiCodeCount = 0;
+        }
+
+    });
+
+
+
+    // The Konami Code: Up, Up, Down, Down, Left, Right, Left, Right, B, A ( ↑ ↑ ↓ ↓ ← → ← → B A )
+    //
+    // Create a file named konami.html using the template below.
+    // This code will log a number reference that is tied to each key that is entered
+    // on your keyboard. Open the console and view the output as you type on the keyboard.
+</script>
+</body>
+</html>

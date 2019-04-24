@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body>
+
+<script>
+    "use strict";
+    // ## Problem 3
+    //
+    // Write a function, ```washCars```, that takes in a array of car objects and sets the boolean properties of
+    // ```isDirty``` to ```false```. Again, no return value is needed since the original array of objects will be changed by this function.
+
+   var cars = [
+        {
+            make: 'Volvo',
+            color: 'red',
+            year: 1996,
+            isDirty: true
+        },
+        {
+            make: 'Toyota',
+            color: 'black',
+            year: 2004,
+            isDirty: false
+        },
+        {
+            make: 'Ford',
+            color: 'white',
+            year: 2007,
+            isDirty: true
+        }
+    ];
+
+    function washCars(cars) {
+    //     console.log(cars[0].isDirty);
+
+       for (var i = 0; i < cars.length; i++) {
+           if (cars[i].isDirty === true) {
+               cars[i].isDirty = false;
+           }
+       }
+    }
+washCars(cars);
+
+
+    // Example Input:
+    //
+    //     ```js
+
+    // ```
+    //
+    // Example Output:
+    //
+    //     ```js
+    // [
+    //     {
+    //         make: 'Volvo',
+    //         color: 'red',
+    //         year: 1996,
+    //         isDirty: false // changed to false
+    //     },
+    //     {
+    //         make: 'Toyota',
+    //         color: 'black',
+    //         year: 2004,
+    //         isDirty: false // stays the same
+    //     },
+    //     {
+    //         make: 'Ford',
+    //         color: 'white',
+    //         year: 2007,
+    //         isDirty: false // changed to false
+    //     }
+    // ]
+    // ```
+
+    // Problem 6
+    //
+    // Create a function, ```firstLettersOfStringProps```, that takes in an object and returns an array of first letters for each property that is a string.
+    //
+    //     Example Input:
+    //
+    //     ```js
+    // {
+    // 	propA: true,
+    // 	propB: "hello"
+    // 	propC: 23,
+    // 	propD: "world"
+    // }
+    // ```
+    //
+    // Example Output:
+    //
+    //     ```js
+    // ['h', 'w']
+    // ```
+
+    function firstLettersOfStringProps(obj) {
+        // create output array
+        var firstLetters = [];
+
+        // loop through properties of object for the data type
+        for (var i = 0; i < Object.keys(obj).length; i += 1) {
+            // if type === "string"
+
+            if ()
+
+                // add the first letter of the string to the output array
+
+        }
+
+
+
+
+
+
+        // return the output array
+        return firstLetters;
+    }
+
+
+
+</script>
+</body>
+</html>

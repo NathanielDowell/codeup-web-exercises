@@ -46,5 +46,5 @@ function randomQuotes() {
     $('#quote-random').text(mooseQuotes[(Math.floor(Math.random() * (mooseQuotes.length + 1)))]);
 }
 
-
-$('#quote-button').click(randomQuotes);
+//
+// $('#quote-button').click(randomQuotes);
