@@ -38,7 +38,7 @@
 
         // event.key is the key pressed, konamiCode is the code array,
             // [konamiCodeCount] uses
-                // if "ArrowUp" === the array item accessed by the current konamiCodeCount value;
+                // if event.key ("ArrowUp") === the array item accessed by the current konamiCodeCount value;
         if (event.key === konamiCode[konamiCodeCount]) {
 
             //increments the konamiCodeCount variable so that it will access the next array item:
@@ -49,10 +49,10 @@
             if (konamiCodeCount === konamiCode.length) {
                 alert("I'm basically Superman.");
 
-                //to allow reuse of the code:
+                //resets count to allow reuse of the code:
                 konamiCodeCount = 0;
             }
-
+// if event.key ("ArrowUp") !=== the array item accessed by the current konamiCodeCount value:
         } else {
             konamiCodeCount = 0;
         }
