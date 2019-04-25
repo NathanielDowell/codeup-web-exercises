@@ -7,9 +7,26 @@
         .invisible {
             visibility:hidden;
         }
+
+        .park-facts-list {
+            display:none;
+        }
+
+        #registration-pesterment {
+            display:none;
+        }
+
+
     </style>
 </head>
 <body>
+
+    <div>
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <span>X</span>
+    </div>
+
+    <h2 id="registration-pesterment">We want you in our database! Register?</h2>
 
     <h1 id="main-header">National Parks FAQ</h1>
 
@@ -48,8 +65,8 @@
 
     <h2>Random Park Facts</h2>
 
-    <h3>Big Bend</h3>
-        <ul>
+    <h3 class="park-name">Big Bend</h3>
+        <ul class="park-facts-list">
             <li>Established in 1944.</li>
             <li>Included the land from Big Bend State Park (established in 1933) that was deeded to the federal government for the park by the state of Texas.</li>
             <li>Largest protected area of the Chihuahuan Desert.</li>
@@ -57,8 +74,8 @@
             <li>There are more species of birds found in Big Bend National Park than in any other national park in the U.S. There are over 450 different species.</li>
         </ul>
 
-    <h3>Yellowstone</h3>
-    <ul>
+    <h3 class="park-name">Yellowstone</h3>
+    <ul class="park-facts-list">
         <li>Established in 1872, becoming the world's first national park.</li>
         <li>Sits atop an active volcano.</li>
         <li>Around four million visits each year. More than half of these visits happen during June, July, and August.</li>
@@ -66,8 +83,8 @@
         <li>Over 500 active geysers (more than half of the world's total)</li>
     </ul>
 
-    <h3>Olympic</h3>
-    <ul>
+    <h3 class="park-name">Olympic</h3>
+    <ul class="park-facts-list">
         <li>Established in 1938.</li>
         <li>Home to a rare temperate rainforest, the Hoh, which receives 12 feet of rain, annually.</li>
         <li>Lake Crescent's waters lack nitrogen, so algae doesn't grow, and makes them crystal clear.</li>
@@ -91,6 +108,8 @@
         //     $(this).addClass('highlight');
         // });
 
+        //--------------------------//
+
     $('#highlight-last-list').click(function(event){
         $('ul').each(function(){
             $(this).children().last().css('background-color', 'yellow');
@@ -104,6 +123,22 @@
     $('li').click(function(event){
         $(this).parent().children().first().css('color', 'blue');
     });
+
+    //-------------------//
+
+    $('span').click(function(event){
+        $(this).parent().hide();
+    });
+
+    $('.park-name').click(function(event){
+        $(this).next().slideDown();
+    });
+
+    //-----Missing-----//
+
+    $('#registration-pesterment').delay(8000).fadeIn();
+
+
 
 </script>
 </body>
