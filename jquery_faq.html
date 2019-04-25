@@ -3,10 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <title>JQuery FAQ</title>
+    <style>
+        .invisible {
+            visibility:hidden;
+        }
+    </style>
 </head>
 <body>
 
+    <h1 id="main-header">National Parks FAQ</h1>
+
+    <dl>
+        <dt class="question">Are pants required in all parks?</dt>
+        <dd class="invisible">Absolutely. For goodness sake, have some consideration for the people around you.</dd>
+
+        <dt class="question">If I scream, will people hear me?</dt>
+        <dd class="invisible">Many of our parks have areas where screaming will not be heard.  If we can hear you, please shut up.</dd>
+
+        <dt class="question">Will park rangers bring me ice cream if it is an emergency?</dt>
+        <dd class="invisible">If you call us, wanting ice cream, we will cut you.</dd>
+
+        <dt class="question">How many visitors to the parks, per year, are aliens posing as human?</dt>
+        <dd class="invisible">Pretty much all of them.</dd>
+
+        <dt class="question">Is being handsome discouraged at the parks?</dt>
+        <dd class="invisible">Physical attractiveness is neither encouraged nor discouraged.  You do you.</dd>
+
+        <dt class="question">My uncle was tackled and ejected from a park for using an air horn at night. Why so hateful?</dt>
+        <dd class="invisible">We really do hate your uncle. He is not welcome here, and you probably aren't either.</dd>
+
+        <dt class="question">Is it true that--</dt>
+        <dd class="invisible">No. It's not.</dd>
+
+        <dt class="question">If Superman and Bugs Bunny got into a fight, who would win?</dt>
+        <dd class="invisible">Bugs Bunny, simply because he lives in a world without rules.</dd>
+
+        <dt class="question">Can I ask another question?</dt>
+        <dd class="invisible">No.</dd>
+
+        <dt class="question">If I got lost, would I be rescued?</dt>
+        <dd class="invisible">It depends on whether or not your uncle was the air horn guy.</dd>
+    </dl>
+    <button id="invisibutton">Reveal the Answers!</button>
+
+    <h2>Random Park Facts</h2>
+
+    <h3>Big Bend</h3>
+        <ul>
+            <li>Established in 1944.</li>
+            <li>Included the land from Big Bend State Park (established in 1933) that was deeded to the federal government for the park by the state of Texas.</li>
+            <li>Largest protected area of the Chihuahuan Desert.</li>
+            <li>There are more than 1,200 different plant species found in Big Bend National Park. Many are not found anywhere else on the planet.</li>
+            <li>There are more species of birds found in Big Bend National Park than in any other national park in the U.S. There are over 450 different species.</li>
+        </ul>
+
+    <h3>Yellowstone</h3>
+    <ul>
+        <li>Established in 1872, becoming the world's first national park.</li>
+        <li>Sits atop an active volcano.</li>
+        <li>Around four million visits each year. More than half of these visits happen during June, July, and August.</li>
+        <li>1000-3000 earthquakes annually.</li>
+        <li>Over 500 active geysers (more than half of the world's total)</li>
+    </ul>
+
+    <h3>Olympic</h3>
+    <ul>
+        <li>Established in 1938.</li>
+        <li>Home to a rare temperate rainforest, the Hoh, which receives 12 feet of rain, annually.</li>
+        <li>Lake Crescent's waters lack nitrogen, so algae doesn't grow, and makes them crystal clear.</li>
+        <li>Banana slugs!</li>
+    </ul>
+
+    <button id="highlight-last-list">Highlight</button>
+
+<script src="js/jquery-2.2.4.js"></script>
 <script>
+    "use strict";
+
+    $('.question').css('color', 'red').css('font-size', '18px');
+
+    $(document).ready(function() {
+        $('#invisibutton').click(function(event){
+            $('dd').toggleClass('invisible');
+        });
+
+        // $('dt').click(function(event){
+        //     $(this).addClass('highlight');
+        // });
+
+    $('#highlight-last-list').click(function(event){
+        $('ul').each(function(){
+            $(this).children().last().css('background-color', 'yellow');
+            });
+        });
+    });
 
 </script>
 </body>
