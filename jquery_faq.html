@@ -97,6 +97,13 @@
             });
         });
     });
+    $('h3').click(function(event){
+        $(this).next().children().css('font-weight', 'bold',);
+    });
+
+    $('li').click(function(event){
+        $(this).parent().children().first().css('color', 'blue');
+    });
 
 </script>
 </body>
