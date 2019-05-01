@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Project</title>
+</head>
+<body>
+
+    <div id="app-wrapper">
+        <h1>Applicable Weather</h1>
+        <h2 id="current-location"></h2>
+            <div class="weather-elements">
+                <h3 id="today-weather">Today</h3>
+                    <span id="today1"></span>
+
+                <h3 id="tomorrow-weather">Tomorrow Weather</h3>
+                    <span id="tomorrow1"></span>
+
+                <h3 id="tomorrow-tomorrow-weather">Tomorrow's Tomorrow Weather</h3>
+                    <span id="tomorrow-tomorrow1"></span>
+
+
+
+        </div>
+    </div>
+
+
+<script src="js/keys.js"></script>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    var cors = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/";
+    var APIKey = darkSkyKey;
+    var lat = "29.4241";
+    var lon = "-98.4936";
+
+    var mapAPI = mapBoxKey;
+
+
+    $.get(cors + "/" + APIKey + "/" + lat + "," + lon).done(function(data) {
+        // log the current temp
+        console.log(data);
+
+        $('#today1').append(
+            "<h4>" + "<em>Temperature (F):</em>" + data.currently.temperature + "</h4>" +
+            + "<img src='img/codeup-arrow.png'>" +
+            "<p><em>Forecast: </em></p>" + data.daily.summary +
+            "<p><em>Humidity: </em></p>" + data.currently.humidity +
+            "<p><em>Wind: </em></p>" + data.currently.windSpeed +
+            "<p><em>Pressure: </em></p>" + data.currently.pressure
+
+        );
+
+        $('#tomorrow1').append(
+            "<h4>" + "<em>Temperature (F):</em>" + data.currently.temperature + "</h4>" +
+            + "<img src='img/codeup-arrow.png'>" +
+            "<p><em>Forecast: </em></p>" + data.daily.summary +
+            "<p><em>Humidity: </em></p>" + data.currently.humidity +
+            "<p><em>Wind: </em></p>" + data.currently.windSpeed +
+            "<p><em>Pressure: </em></p>" + data.currently.pressure
+
+        );
+
+        $('#tomorrow-tomorrow1').append(
+            "<h4>" + "<em>Temperature (F):</em>" + data.currently.temperature + "</h4>" +
+            + "<img src='img/codeup-arrow.png'>" +
+            "<p><em>Forecast: </em></p>" + data.daily.summary +
+            "<p><em>Humidity: </em></p>" + data.currently.humidity +
+            "<p><em>Wind: </em></p>" + data.currently.windSpeed +
+            "<p><em>Pressure: </em></p>" + data.currently.pressure
+
+        );
+
+
+
+    });
+
+    var html = "";
+    $('#current-location').html("San Antonio, TX");
+
+
+</script>
+<script>
+</script>
+</body>
+</html>
+
+method chaining
+$paragraphs.get(3) vs. $paragraphs.eq(3)
