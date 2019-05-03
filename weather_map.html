@@ -3,23 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map Project</title>
+    <style>
+
+        .weather-elements {
+            background-color: #cbffcd;
+            border: 2px solid #262624;
+            padding: 1em;
+        }
+       #container {
+           background-color: #9CE2D6;
+       }
+
+        #heading-junk {
+            background-color: #9CE2D6;
+            border: 2px solid #262624;
+            padding: 1em;
+        }
+
+    </style>
 </head>
 <body>
+    <div id="container">
 
-    <div id="app-wrapper">
-        <h1>Applicable Weather</h1>
-        <h2 id="current-location"></h2>
+        <div id="app-wrapper">
+            <div id="heading-junk">
+                <h1>Applicable Weather</h1>
+
+                <h2 id="current-location"></h2> <!--make this update-->
+
+            </div>
+
             <div class="weather-elements">
                 <h3 id="today-weather">Today</h3>
                     <span id="today1"></span>
+                    <hr>
 
                 <h3 id="tomorrow-weather">Tomorrow Weather</h3>
                     <span id="tomorrow1"></span>
+                    <hr>
 
                 <h3 id="tomorrow-tomorrow-weather">Tomorrow's Tomorrow Weather</h3>
                     <span id="tomorrow-tomorrow1"></span>
-
-
+            </div>
 
         </div>
     </div>
@@ -44,7 +69,7 @@
 
         $('#today1').append(
             "<h4>" + "<em>Temperature (F):</em>" + data.currently.temperature + "</h4>" +
-            + "<img src='img/codeup-arrow.png'>" +
+            "<img src='img/codeup-arrow.png'>" +
             "<p><em>Forecast: </em></p>" + data.daily.summary +
             "<p><em>Humidity: </em></p>" + data.currently.humidity +
             "<p><em>Wind: </em></p>" + data.currently.windSpeed +
@@ -54,7 +79,7 @@
 
         $('#tomorrow1').append(
             "<h4>" + "<em>Temperature (F):</em>" + data.currently.temperature + "</h4>" +
-            + "<img src='img/codeup-arrow.png'>" +
+            "<img src='img/codeup-arrow.png'>" +
             "<p><em>Forecast: </em></p>" + data.daily.summary +
             "<p><em>Humidity: </em></p>" + data.currently.humidity +
             "<p><em>Wind: </em></p>" + data.currently.windSpeed +
@@ -64,7 +89,7 @@
 
         $('#tomorrow-tomorrow1').append(
             "<h4>" + "<em>Temperature (F):</em>" + data.currently.temperature + "</h4>" +
-            + "<img src='img/codeup-arrow.png'>" +
+            "<img src='img/codeup-arrow.png'>" +
             "<p><em>Forecast: </em></p>" + data.daily.summary +
             "<p><em>Humidity: </em></p>" + data.currently.humidity +
             "<p><em>Wind: </em></p>" + data.currently.windSpeed +
@@ -85,6 +110,3 @@
 </script>
 </body>
 </html>
-
-method chaining
-$paragraphs.get(3) vs. $paragraphs.eq(3)
